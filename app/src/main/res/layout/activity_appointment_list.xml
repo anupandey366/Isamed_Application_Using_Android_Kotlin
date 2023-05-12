@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.AppointmentList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_AppointmentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_titleAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:weightSum="2"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back"
+                android:paddingStart="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Appointment List"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+                android:id="@+id/iv_appointmentFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/_5sdp"
+                android:src="@drawable/filter_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/schedule_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Book an appointment"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/isamed_blue"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_titleAppointment" />
+
+        <LinearLayout
+            android:id="@+id/ll_todaySchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_appointment">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Schedule"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18-Apr-2023"
+                android:layout_gravity="right"
+                android:gravity="end"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewAppointment"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_AppointmentList">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

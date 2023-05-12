@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF5d79ba</color>
+    <color name="purple_500">#FF5d79ba</color>
+    <color name="purple_700">#FF5d79ba</color>
+    <color name="teal_200">#FF5d79ba</color>
+    <color name="teal_700">#FF5d79ba</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="isamed_text">#2742b4</color>
+    <color name="isamed_blue">#5d79ba</color>
+    <color name="isamed_dark_blue">#2643a9</color>
+    <color name="isamed_lightGray">#d7d7d7</color>
+    <color name="isamed_red">#be2021</color>
+    <color name="isamed_grayBackground">#f4f4f4</color>
+    <color name="isamed_black">#696969</color>
+    <color name="isamed_lightGrayTextbg">#f4f4f4</color>
+    <color name="gray_icon_color">#a2a2a2</color>
+    <color name="tab_false_color">#ececec</color>
+    <color name="isamed_hint_color">#858484</color>
+
+</resources>

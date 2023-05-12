@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.BookAppointment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titleBookAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_5sdp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Book an appointment"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="Done"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entry"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/isamed_black"
+            android:background="@color/isamed_lightGrayTextbg"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_titleBookAppointment"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_entry">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="First Name"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/et_firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="4"
+                android:background="@drawable/edit_text_box"
+                android:inputType="textCapSentences"
+                android:lines="1"
+                android:fontFamily="@font/helvetica"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:maxLength="20"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_firstName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="Last Name"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/et_lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:fontFamily="@font/helvetica"
+                android:maxLength="20"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_startDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_lastName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="Start Date"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/et_startDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="4"
+                android:background="@drawable/edit_text_box"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_endDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_startDate">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="End Date"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/et_endDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="4"
+                android:background="@drawable/edit_text_box"
+                android:lines="1"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_endDate">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="Start Time"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/et_startTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_startTime">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="End Time"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/et_endTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_checkAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Availability"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/helvetica"
+            android:paddingVertical="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_endTime"
+            />
+
+        <TextView
+            android:id="@+id/tv_patientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Patient Name :"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/isamed_black"
+            android:background="@color/isamed_lightGrayTextbg"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:fontFamily="@font/helvetica"
+            app:layout_constraintTop_toBottomOf="@+id/tv_checkAvailability"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_accountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account Number :"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/isamed_black"
+            android:background="@color/isamed_lightGrayTextbg"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/helvetica"
+            app:layout_constraintTop_toBottomOf="@+id/tv_patientName"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <!-- Location -->
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_accountNumber">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Location"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="12/06/1982"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+        <!-- Provider  -->
+
+
+        <LinearLayout
+            android:id="@+id/ll_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_location">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Provider"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Female"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+        <!-- Practice  -->
+
+        <LinearLayout
+            android:id="@+id/ll_practice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_provider">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_weight="5"
+                android:text="Practice"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Married"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+        <!-- Status -->
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_practice">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_weight="5"
+                android:text="Status"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/helvetica"
+                android:text="Married"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.FilterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titleFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_5sdp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_horizontal"
+                android:text="@string/filter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/helvetica"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_detailMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/helvetica"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/please_fill_up_the_details_to_know_the_test_result_of_the_patient"
+            app:layout_constraintTop_toBottomOf="@id/ll_titleFilter"/>
+
+        <TextView
+            android:id="@+id/tv_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/fields_mandatory"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/isamed_red"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_detailMsg" />
+
+        <LinearLayout
+            android:id="@+id/ll_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_warning">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="@string/first_name"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/et_firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:weightSum="15"
+            app:layout_constraintTop_toBottomOf="@id/ll_firstName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="@string/last_name"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/et_lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_optional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="*Optional Fields"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/isamed_red"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_lastName" />
+
+        <LinearLayout
+            android:id="@+id/ll_accountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_optional">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:lines="2"
+                android:text="Account\nNumber"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="number"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dividerOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_accountNumber">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/isamed_lightGray"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:padding="@dimen/_15sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/or_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_SSN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/cl_dividerOR">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:text="SSN"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

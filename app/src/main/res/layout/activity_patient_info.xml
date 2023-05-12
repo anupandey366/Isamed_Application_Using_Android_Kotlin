@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.PatientInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titlePatientInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_horizontal"
+                android:text="@string/patient_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ci_patientImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_titlePatientInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:src="@drawable/patient_img"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+        <!-- Patient Account Detail-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/ci_patientImage">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Account #"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="56329"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientAccount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientAccount"
+            app:layout_constraintBottom_toTopOf="@+id/ll_patientSSN"
+            />
+
+        <!-- Patient SSN Detail-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientSSN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientAccount">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="SSN"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_ssn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="095966581"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientSSN"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientSSN"
+            />
+
+        <!-- Patient First Name Detail-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientSSN">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="First Name"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="SHAILA"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientFirstName"
+            />
+
+        <!-- Patient Last Name Detail-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientFirstName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Last Name"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="ALAM"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientLastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientLastName"
+            />
+
+        <!-- Patient DOB Detail-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientLastName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="DOB"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="12/06/1982"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientDOB"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientDOB"
+            />
+
+        <!-- Patient Sex Detail-->
+
+
+        <LinearLayout
+            android:id="@+id/ll_patientSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientDOB">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Sex"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Female"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientSex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientSex"
+            />
+
+        <!-- Patient Marital Status-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientMaritalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientSex">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_weight="5"
+                android:text="Marital Status"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Married"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_patientMaritalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            app:layout_constraintTop_toBottomOf="@id/ll_patientMaritalStatus"
+            />
+
+        <!-- Patient Address-->
+
+        <LinearLayout
+            android:id="@+id/ll_patientAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_patientMaritalStatus">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Address"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text=":"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/helvetica"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/helvetica"
+                android:text="2674 SHIRLEY LN"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.PrescriptionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titlePrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/prescription"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/banner1"
+            app:layout_constraintTop_toBottomOf="@id/ll_titlePrescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+<!--        Pharmacy-->
+
+        <LinearLayout
+            android:id="@+id/ll_pharmacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/iv_banner">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/pharmacy"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="6"
+                android:background="@drawable/edit_text_box"
+                android:fontFamily="@font/helvetica"
+                android:inputType="textCapSentences"
+                android:lines="1"
+                android:maxLength="20"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+<!--        Drug-->
+
+        <LinearLayout
+            android:id="@+id/ll_drug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_pharmacy">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/drug"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="6"
+                android:background="@drawable/edit_text_box"
+                android:fontFamily="@font/helvetica"
+                android:inputType="textCapSentences"
+                android:lines="1"
+                android:maxLength="20"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+<!--        Dose Type-->
+
+        <LinearLayout
+            android:id="@+id/ll_doseType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_drug">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/dose_type"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+<!--        Quantity-->
+
+        <LinearLayout
+            android:id="@+id/ll_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_doseType">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/quantity"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+<!--        Refill-->
+
+        <LinearLayout
+            android:id="@+id/ll_refill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_quantity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/refill"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:fontFamily="@font/helvetica"
+                android:maxLength="20"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+<!--        Direction-->
+
+        <LinearLayout
+            android:id="@+id/ll_direction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_refill">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/direction"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:fontFamily="@font/helvetica"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+<!--        Days Supply 1-->
+
+        <LinearLayout
+            android:id="@+id/ll_supply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="18"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_direction">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:text="@string/days_supply_1"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:lines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/isamed_black"
+                android:inputType="textCapSentences"
+                android:fontFamily="@font/helvetica"
+                android:maxLength="20"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg"
+            android:gravity="center_horizontal"
+            android:paddingVertical="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_supply"
+            />
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date :"
+            android:fontFamily="@font/helvetica"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:id="@+id/tv_PaymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03/08/2023"
+            android:fontFamily="@font/helvetica"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/tv_PaymentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13:31:33"
+            android:fontFamily="@font/helvetica"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/isamed_lightGray"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+
+</LinearLayout>

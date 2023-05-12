@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.LabOrderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titleLabOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/lab_order"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/banner1"
+            app:layout_constraintTop_toBottomOf="@id/ll_titleLabOrder"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+<!--        Order-->
+
+        <LinearLayout
+            android:id="@+id/ll_Order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/iv_banner">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Order"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/helvetica"
+                android:text="92534-267408"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Order"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Order"
+            />
+
+<!--        Date-->
+
+        <LinearLayout
+            android:id="@+id/ll_Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Order">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Date"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/helvetica"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="27/06/2013"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Date"
+            />
+
+<!--        Laboratory-->
+
+        <LinearLayout
+            android:id="@+id/ll_Laboratory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Date">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Laboratory"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Laboratory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/helvetica"
+                android:text="QUEST"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Laboratory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Laboratory"
+            />
+
+<!--        Test Order-->
+
+        <LinearLayout
+            android:id="@+id/ll_TestOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Laboratory">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/helvetica"
+                android:text="Test Order"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_TestOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="30403E"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_TestOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_TestOrder"
+            />
+
+<!--        Test Name-->
+
+        <LinearLayout
+            android:id="@+id/ll_TestName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_TestOrder">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Test Name"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_TestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/lipase"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_TestName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_TestName"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

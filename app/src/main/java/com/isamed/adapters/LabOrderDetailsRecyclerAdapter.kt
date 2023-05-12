@@ -1,0 +1,42 @@
+package com.isamed.adapters
+
+import android.content.Context
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.isamed.R
+import com.isamed.modalClasses.LabOrderDetailsRecyclerModal
+import com.isamed.ui.activities.LabOrderActivity
+import kotlinx.android.synthetic.main.lab_order_details_recycler_layout.view.*
+
+class LabOrderDetailsRecyclerAdapter(val context: Context, val arrAppointmentDetails: ArrayList<LabOrderDetailsRecyclerModal>) : RecyclerView.Adapter<LabOrderDetailsRecyclerAdapter.ViewHolder>() {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val orderDate = itemView.tv_PaymentDate
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(
+            LayoutInflater.from(context)
+                .inflate(R.layout.lab_order_details_recycler_layout, parent, false)
+        )
+    }
+
+    override fun getItemCount(): Int {
+        return arrAppointmentDetails.size
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.orderDate.text = arrAppointmentDetails[position].orderDate
+
+        holder.itemView.setOnClickListener {
+            context.startActivity(Intent(context,LabOrderActivity::class.java))
+        }
+
+/*
+        holder.appointmentTime.setOnClickListener {
+            Toast.makeText(context, ""+holder.appointmentTime.text.toString(), Toast.LENGTH_SHORT).show()
+        }*/
+    }
+}

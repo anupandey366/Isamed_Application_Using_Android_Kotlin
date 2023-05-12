@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.PaymentScreenActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_titlePaymentScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/isamed_blue"
+            android:paddingVertical="@dimen/_10sdp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_backPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Payment Screen"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/banner1"
+            app:layout_constraintTop_toBottomOf="@id/ll_titlePaymentScreen"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <!--        Visit Date-->
+
+        <LinearLayout
+            android:id="@+id/ll_VisitDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/iv_banner">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Visit Date"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_VisitDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:lines="1"
+                android:fontFamily="@font/helvetica"
+                android:text="03/08/2023 13:31:33"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_VisitDate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_VisitDate"
+            />
+
+        <!--        Plan   -->
+
+        <LinearLayout
+            android:id="@+id/ll_Plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_VisitDate">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Plan"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/helvetica"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/_0"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Plan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Plan"
+            />
+
+        <!--        Location    -->
+
+        <LinearLayout
+            android:id="@+id/ll_Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Plan">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Location"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/helvetica"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="BUCKGNOFF"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Location"
+            />
+
+        <!--        Provider      -->
+
+        <LinearLayout
+            android:id="@+id/ll_Provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Location">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Provider"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Provider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="MOBIL"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Provider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Provider"
+            />
+
+        <!--        Amount      -->
+
+        <LinearLayout
+            android:id="@+id/ll_Amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Provider">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Amount"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/_0"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Amount"
+            />
+
+<!--        Paid   -->
+
+        <LinearLayout
+            android:id="@+id/ll_Paid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Amount">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Paid"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_Paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/_0"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_Paid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Paid"
+            />
+
+<!--        W/O       -->
+
+        <LinearLayout
+            android:id="@+id/ll_WO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="15"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/v_Paid">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="W/O"
+                android:fontFamily="@font/helvetica"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/isamed_blue"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.7"
+                android:text="@string/colon"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/tv_WO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/_0"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/isamed_black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_WO"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/isamed_lightGray"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_WO"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
